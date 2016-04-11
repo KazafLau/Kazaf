@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="lib">
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/el-api.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/jasper.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/jsp-api.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/catalina.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/ecj-4.5.1.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/jasper-el.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/jaspic-api.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-api.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-jni.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/catalina-ha.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/servlet-api.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-dbcp.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-jdbc.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-util.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/catalina-ant.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-coyote.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/websocket-api.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-i18n-es.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-i18n-fr.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-i18n-ja.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/annotations-api.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/catalina-tribes.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-util-scan.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/tomcat-websocket.jar" />
+    <archive path="/usr/local/apache-tomcat-9.0.0.M4/lib/catalina-storeconfig.jar" />
+  </library>
+</eclipse-userlibraries>
+

@@ -14,7 +14,10 @@
    </environments>
     
  <mappers>
-   <mapper resource="com/credit/mapping/billMapper.xml"/>
+     <mapper resource="com/kazaf/mapping/BillMapper.xml"/>
+     <mapper resource="com/kazaf/mapping/GymMapper.xml"/>
+     <mapper resource="com/kazaf/mapping/GymAnaerobicMapper.xml"/>
+     <mapper resource="com/kazaf/mapping/CommonMapper.xml"/>
  </mappers>  
   
  </configuration>
