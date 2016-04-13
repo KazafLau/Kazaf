@@ -16,7 +16,41 @@ public class JDBCMySql {
     private static Connection con;
     private PreparedStatement pst;
     private  ResultSet rs;
-
+    
+    private static final ThreadLocal<Connection> 	CONNECTION_HOLDER	= new  ThreadLocal<Connection>();
+    
+    /* 获取数据库链接 */
+   public static Connection getConnection(){
+	  Connection conn=CONNECTION_HOLDER.get();
+	  if(conn==null){
+		  try {
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/credit?useUnicode=true&amp;characterEncoding=UTF-8", username, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			CONNECTION_HOLDER.set(conn);
+			}
+	  }
+	   return conn;
+   }
+    
+   /*关闭数据库*/
+   public static void closeConnection(){
+	con=CONNECTION_HOLDER.get();
+	if(con!=null){
+		try {
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally{
+			CONNECTION_HOLDER.remove();
+		}
+	}
+  }
+  
     public static String getUsername() {
         return username;
     }
@@ -33,23 +67,10 @@ public class JDBCMySql {
         JDBCMySql.password = password;
     }
 
-    static {
+ /*   static {
         con=connect(username,password);
     }
-
-    public static Connection connect(String username,String password){
-       if(con==null) {
-           try {
-               Class.forName("com.mysql.jdbc.Driver");
-               Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/credit?useUnicode=true&amp;characterEncoding=UTF-8", username, password);
-               return con;
-           } catch (Exception e) {
-               e.printStackTrace();
-               return null;
-           }
-       }
-        else return con;
-    }
+*/
 
 
     public List<Bill> getAllBill(){

@@ -54,12 +54,16 @@ public class longtest {
        // System.out.println(ExecuteMySql.t1);
 
 
+    	System.out.println("THis is before  "+JDBCMySql.getConnection());
+    	
         JDBCMySql jdbcMySql=new JDBCMySql();
-        String startdate="2015-01-01";
-        String enddate="2016-03-31";
-        for(Bill bill:jdbcMySql.getTypebetween(startdate,enddate)){
-            System.out.println(bill.getBill_date()+" "+bill.getBill_comments()+" "+bill.getBill_cost());
-        }
+        
+        System.out.println("THis is after  "+JDBCMySql.getConnection());
+     //   String startdate="2015-01-01";
+       // String enddate="2016-03-31";
+        //for(Bill bill:jdbcMySql.getTypebetween(startdate,enddate)){
+          //  System.out.println(bill.getBill_date()+" "+bill.getBill_comments()+" "+bill.getBill_cost());
+        //}
 
 
 
