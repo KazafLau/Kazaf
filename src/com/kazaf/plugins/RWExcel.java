@@ -20,7 +20,7 @@ import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -71,7 +71,7 @@ public class RWExcel {
 	}
 
 	// 针对于excel2007以上版本
-	public List readExcel5(String file, int page, String type) throws FileNotFoundException, IOException, EncryptedDocumentException, InvalidFormatException {
+	public List readExcel5(String file, int page, String type) throws FileNotFoundException, IOException, EncryptedDocumentException, InvalidFormatException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
 		if (type == "gym") page = page + 13;
 		InputStream ins = new FileInputStream(new File(file));
 		Workbook wb = WorkbookFactory.create(ins);

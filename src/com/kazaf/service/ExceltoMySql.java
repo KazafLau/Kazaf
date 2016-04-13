@@ -8,7 +8,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 
 import java.io.*;
@@ -37,7 +37,7 @@ public class ExceltoMySql {
 
 
     //批量将mysqlList中的元素插入到数据库中
-    public void insertList(String type,int month,String file)throws IOException,InvalidFormatException{
+    public void insertList(String type,int month,String file)throws IOException,InvalidFormatException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
         month=month-1;
         try{
             mysqlList= readExcel(file, month, type);
@@ -55,7 +55,7 @@ public class ExceltoMySql {
     }
 
     //打开excel文件,将文件中的相应页面读取到List列表中
-    public  List readExcel(String file, int page, String type) throws IOException, EncryptedDocumentException, InvalidFormatException {
+    public  List readExcel(String file, int page, String type) throws IOException, EncryptedDocumentException, InvalidFormatException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
         if (type.equals( "gym")) { page = page + 13;}
 
         ins = new FileInputStream(new File(file));
