@@ -13,7 +13,7 @@ public class ExceltoMySqlTest {
 
         ExceltoMySql etm=new ExceltoMySql();
 
-        String  file="/Users/kazaf/Desktop/2016.xlsx";
+        String  file="/Users/kazaf/Documents/workspace/Bill/out/artifacts/Bill_war_exploded/WEB-INF/upload/2/7/d44e8e1c-039d-48a1-91da-13c42cf22e9a_test.xlsx";
 
         String type="bill";
 

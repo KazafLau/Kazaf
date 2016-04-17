@@ -18,11 +18,27 @@
     <servlet-name>GymServlet</servlet-name>
   <servlet-class>com.kazaf.servlet.GymServlet</servlet-class>
   </servlet>
+
+
+  <servlet>
+    <servlet-name>ReadExcelServlet</servlet-name>
+  <servlet-class>com.kazaf.servlet.ReadExcelServlet</servlet-class>
+  </servlet>
   
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>ReadExcelServlet</servlet-name>
+    <url-pattern>/ReadExcelServlet</url-pattern>
+  </servlet-mapping>
+  
+
   <servlet-mapping>
     <servlet-name>FirstServlet</servlet-name>
     <url-pattern>/FirstServlet</url-pattern>
   </servlet-mapping>
+
   
   <servlet-mapping>
     <servlet-name>GymServlet</servlet-name>

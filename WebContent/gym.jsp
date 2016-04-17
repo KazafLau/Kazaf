@@ -15,22 +15,21 @@
 </head>
 <body>
 <label>Hello this is gym page</label><br>
-<%
- // ExecuteMySql em=ExecuteMySql.getInstance();
-  List<Bill> list=ExecuteMySql.getBillList();
-  for(Bill tempbill:list){
-%>
-<%=tempbill.getBill_date()%> &nbsp&nbsp <%=tempbill.getBill_comments()%> &nbsp&nbsp <%=tempbill.getBill_cost()%>  <br>
-<%
-  }
-%>
+
 
 <form action="GymServlet" method="post">
   <label>用户名</label> <input type="text" name="username">
   <label>密码</label> <input type="password" name="password">
   <input type="submit" value="确认">
 </form>
+<%=request.getParameter("username")%><br>
+session:${rtest}<br>
+param:${param.username}<br>
+session:<%=session.getAttribute("stest")%><br>
 
+<%request.setAttribute("rtest","setinjsp");%>
+
+request:${requestScope.rtest}<br>
 
 
 </body>

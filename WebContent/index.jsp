@@ -1,3 +1,5 @@
+<%@ page import="com.kazaf.plugins.ExecuteMySql" %>
+<%@ page import="com.kazaf.domain.Bill" %>
 <%--
   Created by IntelliJ IDEA.
   User: Kazaf
@@ -15,6 +17,11 @@
  <label>用户名</label> <input type="text" name="username">
   <label>密码</label> <input type="password" name="password">
   <input type="submit" value="确认">
+<%
+    for(Bill temp:ExecuteMySql.getBillList()){
+        %><%=temp.getBill_comments()%><br><%
+    }
+%>
 </form>
 </body>
 </html>

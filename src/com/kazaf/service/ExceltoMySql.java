@@ -8,8 +8,8 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFDataFormat;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.openxml4j.exceptions.*;
 
 import java.io.*;
 import java.sql.Date;
@@ -37,7 +37,7 @@ public class ExceltoMySql {
 
 
     //批量将mysqlList中的元素插入到数据库中
-    public void insertList(String type,int month,String file)throws IOException,InvalidFormatException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
+    public void insertList(String type,int month,String file)throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
         month=month-1;
         try{
             mysqlList= readExcel(file, month, type);
@@ -55,7 +55,9 @@ public class ExceltoMySql {
     }
 
     //打开excel文件,将文件中的相应页面读取到List列表中
-    public  List readExcel(String file, int page, String type) throws IOException, EncryptedDocumentException, InvalidFormatException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
+    public  List readExcel(String file, int page, String type) throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
+
+
         if (type.equals( "gym")) { page = page + 13;}
 
         ins = new FileInputStream(new File(file));
@@ -98,6 +100,58 @@ public class ExceltoMySql {
         out = new FileOutputStream(file);
         wb.write(out);
         return BGList;
+    }
+
+
+    public void insertListStream(String type,int month,InputStream stream)throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
+        month=month-1;
+        if (type.equals( "gym")) { month = month + 13;}
+        wb=WorkbookFactory.create(stream);
+        excelsheet = wb.getSheetAt(month);
+
+        if(stream!=null)
+        {
+            stream.close();
+        }
+        int recordnum = excelsheet.getLastRowNum() + 1;
+        Row excelrow = excelsheet.getRow(0);
+        int columnum = excelrow.getLastCellNum();
+        Cell excelcell;
+
+        try{
+            if(type.equals("gym")){
+                Gym gymtemp;
+                for (int i = 1; i < recordnum; i++) {
+                    gymtemp = new Gym();
+                    excelrow = excelsheet.getRow(i);
+                    for (int j = 0; j < columnum; j++) {
+                        excelcell = excelrow.getCell(j);
+                        parseExceltoGym(excelcell, gymtemp, j);
+                    }
+                    BGList.add(gymtemp);
+                }
+                mysqlList=BGList;
+                ExecuteMySql.getCommonDao().insertGymList(mysqlList);
+            }else{
+                Bill billtemp;
+                for (int i = 1; i < recordnum; i++) {
+                    billtemp = new Bill();
+                    excelrow = excelsheet.getRow(i);
+                    for (int j = 0; j < columnum; j++) {
+                        excelcell = excelrow.getCell(j);
+                        parseExceltoBill(excelcell, billtemp, j);
+                    }
+                    BGList.add(billtemp);
+                }
+                mysqlList=BGList;
+                ExecuteMySql.getCommonDao().insertBillList(mysqlList);
+            }
+            ExecuteMySql.getSession().commit();
+        }
+        finally {
+            ExecuteMySql.CloseMysql();
+        }
+
     }
 
     //读取Excel中Bill数据并判断格式提取
