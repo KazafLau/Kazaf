@@ -2,206 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7254093e-02ee-43af-a7b9-e4e16824ec2a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Webapp/gym.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/Webapp/upload.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/configuration/AppConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/configuration/DataSourceConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/configuration/SpringMVCConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/configuration/SpringWebApplicationInitializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/controller/BillController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/BMRCalculatorService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/IBillService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/IDateCalculatorService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/impl/BillServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/impl/DateCalculatorServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/servletlistener/RequestAttributeListener1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/servletlistener/RequestListener1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/servletlistener/SessionAttributeListener1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/servletlistener/SessionListener1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/test/SpringMybatisTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/utils/ExceltoMySql.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/msword/HwpfTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/msword/antiML.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/msword/pojo/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/msword/utils/ReadfromExcel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/msword/utils/WritefromExcel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/stock/dao/CWLDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/stock/mapping/CuiWeiLongMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/stock/pojos/TradeInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/stock/test/ExceltoMySqlTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/stock/utils/ExceltoMySql.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/stock/utils/ExecuteMySql.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/conf.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/indexll.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/message.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/views/upload.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web----1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/indexll.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Bill_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_03.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_6_0_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ibatis_ibatis_core_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/commons_fileupload_1_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/commons_io_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_5_1_38.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/ibatis-core-3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/upload.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.38-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/dao/CommonDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/dao/billdao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/dao/gymdao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/domain/BGinter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/domain/Bill.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/domain/Gym.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/domain/Gym_Anaerobic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/mapping/BillMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/mapping/CommonMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/mapping/GymAnaerobicMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/mapping/GymMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/plugins/DateConvertor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/plugins/ExecuteMySql.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/plugins/JDBCMySql.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/plugins/RWExcel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/service/BMRcalculator$Calorie.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/service/BMRcalculator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/service/ExceltoMySql.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/service/Upload.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/servlet/FirstServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/servlet/GymServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/servlet/ReadExcelServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/test/DateConvertorTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/test/ExceltoMySqlTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/test/RWExcelTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/com/kazaf/test/longtest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/classes/conf.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/annotations-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/catalina-ant.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/catalina-ha.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/catalina-storeconfig.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/catalina-tribes.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/catalina.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/commons-codec-1.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/commons-codec-1.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/commons-logging-1.1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/curvesapi-1.03.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/ecj-4.5.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/el-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/ibatis-core-3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/jasper-el.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/jasper.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/jaspic-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/jsp-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/junit-4.12.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/mybatis-3.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.38-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/poi-3.13-20150929.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/poi-3.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/poi-excelant-3.13-20150929.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/poi-ooxml-3.13-20150929.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/poi-ooxml-3.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/poi-ooxml-schemas-3.13-20150929.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/poi-ooxml-schemas-3.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/servlet-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/stax-api-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-coyote.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-dbcp.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-i18n-es.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-i18n-fr.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-i18n-ja.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-jdbc.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-jni.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-util-scan.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-util.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/tomcat-websocket.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/websocket-api.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/lib/xmlbeans-2.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/temp/upload_d4863d19_d2f8_4e8b_a788_3101c5543c1c_00000000.tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/0/2/ca25e277-39a3-4331-82c5-aa9eecd10628_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/12/3/f15c5ed4-551a-41be-9a12-0a24bd341809_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/15/4/8d57fe17-cfda-4669-bc27-179afa31bc43_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/2/1/7324ae38-406a-4ca2-977d-480fefe562cc_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/2/2/70755622-c775-4297-a696-7db246efa1e1_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/2/7/d44e8e1c-039d-48a1-91da-13c42cf22e9a_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/6/2/72209aa7-a999-45ec-bef1-ed150ec25ce0_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/7/4/9929d40c-4133-4932-bc45-8bdddc527355_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload/8/9\7994e588-e836-4cf4-9106-8021eee517ba_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\11\8\b28796c2-7397-4ec1-9b9e-c73b3aa6fc93_Bill.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\12\8\b194a59b-afa7-4714-afd8-018da12fc890_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\13\15\cbeeca69-93f2-47c7-8628-b5fc5d35f708_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\13\3\e25c8ca3-19eb-41a4-9cf0-b93118656377_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\14\0\b9836168-ba15-4a54-81fd-471a9604b55e_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\15\8\4ea4b7d5-43a2-41bb-9b8a-7b9d3ad2dd24_test.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\7\0\81623582-597d-483c-a9a0-c6e93324d550_2016.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/upload\7\7\e3beaf10-6f53-44c4-a35c-1fafb90679c9_学习金字塔.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/kazaf/plugins/RWExcel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/kazaf/service/ExceltoMySql.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/kazaf/service/Upload.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/kazaf/test/RWExcelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/commons-codec-1.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/curvesapi-1.03.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/mybatis-3.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/mysql-connector-java-5.1.38-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/poi-3.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/poi-ooxml-3.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/poi-ooxml-schemas-3.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/stax-api-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/lib/xmlbeans-2.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/kazaf/service/BMRcalculator.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/main/Webapp/META-INF/MANIFEST.MF" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/gym.jsp" afterPath="$PROJECT_DIR$/src/main/resources/views/gym.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/index.jsp" afterPath="$PROJECT_DIR$/src/main/Webapp/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WebContent/message.jsp" afterPath="$PROJECT_DIR$/src/main/Webapp/message.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/dao/CommonDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/dao/CommonDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/dao/billdao.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/dao/billdao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/dao/gymdao.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/dao/gymdao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/domain/BGinter.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/pojos/BGinter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/domain/Bill.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/pojos/Bill.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/domain/Gym.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/pojos/Gym.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/domain/Gym_Anaerobic.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/pojos/Gym_Anaerobic.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/mapping/BillMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/mapping/BillMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/mapping/CommonMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/mapping/CommonMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/mapping/GymAnaerobicMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/mapping/GymAnaerobicMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/mapping/GymMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/mapping/GymMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/plugins/DateConvertor.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/DateConvertor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/plugins/ExecuteMySql.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/ExecuteMySql.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/plugins/JDBCMySql.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/service/JDBCMySql.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/servlet/FirstServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/servlet/FirstServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/servlet/GymServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/servlet/GymServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/servlet/ReadExcelServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/servlet/ReadExcelServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/test/DateConvertorTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/test/DateConvertorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/test/ExceltoMySqlTest.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/test/ExceltoMySqlTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/kazaf/test/longtest.java" afterPath="$PROJECT_DIR$/src/main/java/com/kazaf/test/longtest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/conf.xml" afterPath="$PROJECT_DIR$/src/main/java/confCWL.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Bill_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Bill_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bill.iml" afterPath="$PROJECT_DIR$/Bill.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/upload.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Bill_war_exploded/upload.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/conf.xml" afterPath="$PROJECT_DIR$/src/main/java/conf.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/confCWL.xml" afterPath="$PROJECT_DIR$/src/main/java/confCWL.xml" />
     </list>
     <ignored path="Bill.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -280,8 +82,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/kazaf/controller/BillController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/kazaf/configuration/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/stock/TradeInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/conf.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/confCWL.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/stock/pojos/TradeInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/stock/dao/CWLDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/stock/test/ExceltoMySqlTest.java" />
@@ -295,6 +95,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/msword/antiML.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/msword/utils/WritefromExcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/msword/HwpfTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/confCWL.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/conf.xml" />
       </list>
     </option>
   </component>
@@ -1380,12 +1182,12 @@
       <workItem from="1463404731624" duration="3244000" />
       <workItem from="1463459395873" duration="2781000" />
       <workItem from="1463468415135" duration="35669000" />
-      <workItem from="1463875305236" duration="17409000" />
+      <workItem from="1463875305236" duration="18622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61030000" />
+    <option name="totallyTimeSpent" value="62243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1613,14 +1415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/confCWL.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17699115">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/kazaf/service/IBillService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1809,9 +1603,9 @@
         <state vertical-scroll-proportion="0.7683983">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1711#1712#0" expanded="true" />
-            <element signature="e#1767#1768#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1711#1712#0" expanded="false" />
+            <element signature="e#1767#1768#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1828,14 +1622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25974026">
           <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/conf.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65068495">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1929,8 +1715,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="78" column="8" selection-start-line="77" selection-start-column="12" selection-end-line="78" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#687#697#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1944,6 +1729,22 @@
             <element signature="method#closeStream#0;class#WritefromExcel#0" expanded="false" />
             <element signature="method#closeStream#1;class#WritefromExcel#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/conf.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22123894">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/confCWL.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24336283">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
