@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.stock.dao.CWLDAO">
+    
+     <select id="getCWL" parameterType="int"  resultType="com.stock.pojos.TradeInfo">
+         select * from CuiWeiLong where SerialNumber=#{SerialNumber}
+     </select>
+     
+     <insert id="insertCWL" parameterType="com.stock.pojos.TradeInfo">
+          insert into CuiWeiLong (ZiJinID,StockID,StockName,TradeMoney,TradeQuantity,TradeTime,SerialNumber,Action)
+          values(#{ZiJinID},
+         #{StockID},
+         #{StockName},
+         #{TradeMoney} ,
+         #{TradeQuantity},
+         #{TradeTime},
+         #{SerialNumber}
+         #{Action})
+     </insert>
+     
+    
+    <select id="getAllCWL" resultType="com.stock.pojos.TradeInfo">
+        select * from CuiWeiLong ;
+    </select>
+
+    <insert id="insertTradeList" parameterType="java.util.List">
+
+        INSERT INTO CuiWeiLong (ZiJinID,StockID,StockName,TradeMoney,TradeQuantity,TradeTime,SerialNumber,Action) VALUES
+        <foreach collection="list" item="item" index="index"  separator=",">
+            (#{item.ZiJinID},
+            #{item.StockID},
+            #{item.StockName},
+            #{item.TradeMoney},
+            #{item.TradeQuantity},
+            #{item.TradeTime},
+            #{item.SerialNumber},
+            #{item.Action} )
+        </foreach>
+
+    </insert>
+
+ </mapper>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="home" class="com.kazaf.spring.test.SweetHome">
+        <constructor-arg name="homename" value="Kazaf'shome"/>
+        <constructor-arg name="tv" ref="tV"/>
+        <constructor-arg name="dad" ref="dad"/>
+        <constructor-arg name="mom" ref="mom"/>
+
+
+     <!--   <property name="tv" ref="tV"/>
+        <property name="dad" ref="dad"/>
+        <property name="mom" ref="mom"/> -->
+    </bean>
+
+
+    <bean id="mom" class="com.kazaf.spring.test.familymembers.Mom"/>
+
+    <bean id="dad" class="com.kazaf.spring.test.familymembers.Dad"/>
+
+    <bean id="tV" class="com.kazaf.spring.test.TV">
+        <constructor-arg index="0" value="true"/>
+        <constructor-arg index="1" value="12"/>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+
+    <!-- more bean definitions go here -->
+
+</beans>

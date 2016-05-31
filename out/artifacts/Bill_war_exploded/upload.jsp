@@ -2,14 +2,19 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>文件上传</title>
+    <title>读取Excel</title>
   </head>
   
   <body>
     <form action="ReadExcelServlet"  enctype="multipart/form-data" method="post">
-        上传文件：<input type="file" name="file1"><br/>
+        读取文件：<input type="file" name="file1"><br/>
+        <input type="text" name="month"/>
+        <select name="type">
+            <option value="bill">Bill</option>
+            <option value="gym">Gym</option>
+        </select>
 
-        <input type="submit" value="提交">
+        <input type="submit" value="读取">
     </form>
 
 

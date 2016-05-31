@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.kazaf.dao.GymDAO">
+    
+     <select id="getGymAnaerobic" parameterType="int"  resultType="com.kazaf.pojos.Gym_Anaerobic">
+         select * from gym_anaerobic where gym_id=#{gym_id}
+     </select>
+     
+     <insert id="insertGymAnaerobic" parameterType="com.kazaf.pojos.Gym_Anaerobic">
+          insert into gym_anaerobic (gym_date,gym_option,gym_part,gym_weight,gym_rounds,gym_reps)
+          values(#{gym_date},#{gym_option},#{gym_part},#{gym_weight},#{gym_rounds},#{gym_reps})
+     </insert>
+     
+     
+ </mapper>
