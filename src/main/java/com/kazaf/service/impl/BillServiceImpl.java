@@ -17,7 +17,7 @@ import java.io.InputStream;
 @Service("BillService")
 public class BillServiceImpl implements IBillService {
 
-    private String type="bill";
+
 
     @Resource
     private ExceltoMySql etm;
@@ -26,7 +26,7 @@ public class BillServiceImpl implements IBillService {
     public void insertList(String file, int month) {
         try{
             if(etm==null) etm=new ExceltoMySql();
-            etm.insertList(type,month,file);
+            etm.insertList(month,file);
         }
         catch (InvalidFormatException e){
            e.printStackTrace();
@@ -44,7 +44,7 @@ public class BillServiceImpl implements IBillService {
     public void insertListStream(int month, InputStream stream) {
         try{
             if(etm==null) etm = new ExceltoMySql();
-            etm.insertListStream(type,month,stream);
+            etm.insertListStream(month,stream);
         }
         catch (InvalidFormatException e){
             e.printStackTrace();

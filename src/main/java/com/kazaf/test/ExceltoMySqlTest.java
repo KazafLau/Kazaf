@@ -22,7 +22,7 @@ public class ExceltoMySqlTest {
         int month= sc.nextInt();
 
         try{
-        etm.insertList(type,month,file);
+        etm.insertList(month,file);
 
         }
 
