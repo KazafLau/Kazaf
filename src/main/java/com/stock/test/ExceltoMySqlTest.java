@@ -16,8 +16,6 @@ public class ExceltoMySqlTest {
         String  file="cwl.xlsx";
 
 
-
-
         try{
         etm.insertList(file);
 

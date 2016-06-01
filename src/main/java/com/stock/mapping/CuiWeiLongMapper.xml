@@ -4,11 +4,11 @@
  <mapper namespace="com.stock.dao.CWLDAO">
     
      <select id="getCWL" parameterType="int"  resultType="com.stock.pojos.TradeInfo">
-         select * from CuiWeiLong where SerialNumber=#{SerialNumber}
+         select * from TradeInfo where SerialNumber=#{SerialNumber}
      </select>
      
      <insert id="insertCWL" parameterType="com.stock.pojos.TradeInfo">
-          insert into CuiWeiLong (ZiJinID,StockID,StockName,TradeMoney,TradeQuantity,TradeTime,SerialNumber,Action)
+          insert into TradeInfo (ZiJinID,StockID,StockName,TradeMoney,TradeQuantity,TradeTime,SerialNumber,Action)
           values(#{ZiJinID},
          #{StockID},
          #{StockName},
@@ -21,12 +21,12 @@
      
     
     <select id="getAllCWL" resultType="com.stock.pojos.TradeInfo">
-        select * from CuiWeiLong ;
+        select * from TradeInfo ;
     </select>
 
     <insert id="insertTradeList" parameterType="java.util.List">
 
-        INSERT INTO CuiWeiLong (ZiJinID,StockID,StockName,TradeMoney,TradeQuantity,TradeTime,SerialNumber,Action) VALUES
+        INSERT INTO TradeInfo (ZiJinID,StockID,StockName,TradeMoney,TradeQuantity,TradeTime,SerialNumber,Action) VALUES
         <foreach collection="list" item="item" index="index"  separator=",">
             (#{item.ZiJinID},
             #{item.StockID},

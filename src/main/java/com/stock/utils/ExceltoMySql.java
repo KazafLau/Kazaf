@@ -32,14 +32,13 @@ public class ExceltoMySql {
     private InputStream ins;
     private XSSFWorkbook wb;
     private Sheet excelsheet;
+    private GetDate getDate=new GetDate();
+    private TradeInfo tradeInfo;
 
     //批量将mysqlList中的元素插入到数据库中,需结合readExcel方法的进行
     public void insertList(String file)throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
-
         ExecuteMySql ems=new ExecuteMySql();
-
         mysqlList= readExcel(file);
-
         try{
             ExecuteMySql.getCWLDao().insertTradeList(mysqlList);
             ems.sessionCommit();
@@ -47,96 +46,50 @@ public class ExceltoMySql {
         finally {
             ems.CloseMysql();
         }
-
     }
 
     //打开excel文件,将文件中的相应页面读取到List列表中
     public  List readExcel(String file) throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
-
-
-
         ins = new FileInputStream(new File(file));
         OPCPackage pkg = OPCPackage.open(ins);
         wb = new XSSFWorkbook(pkg);
         excelsheet = wb.getSheetAt(0);
         ins.close();
-
-
-        Iterator<Row> itrow=excelsheet.rowIterator();
-        itrow.next();
-        itrow.remove();
-
-
-            TradeInfo tradeInfo;
-            while(itrow.hasNext()){
-                tradeInfo = new TradeInfo();
-                Row rowtemp=itrow.next();
-                for(Cell cell:rowtemp){
-                    parseCellBill(cell,tradeInfo);
-                }
-                BGList.add(tradeInfo);
-            }
-
-        return BGList;
+        return  excelcell(excelsheet);
     }
 
     //直接打开流文件来获取excel,是servlet中采取的方法,但是没有实例化ExceltoMysql,而是使用了静态方法
-    public void insertListStream(String type,int month,InputStream stream)throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
-
+    public void insertListStream(InputStream stream)throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
         OPCPackage pkg = OPCPackage.open(stream);
         wb = new XSSFWorkbook(pkg);
         excelsheet = wb.getSheetAt(0);
-
         if(stream!=null)
         {
             stream.close();
         }
-        Iterator<Row> itrow=excelsheet.rowIterator();
-        itrow.next();
-        itrow.remove();
-
-
+        mysqlList=excelcell(excelsheet);
         try {
-            TradeInfo tradeInfo;
-            while (itrow.hasNext()) {
-                tradeInfo = new TradeInfo();
-                Row rowtemp = itrow.next();
-                for (Cell cell : rowtemp) {
-                    parseCellBill(cell, tradeInfo);
-                }
-                BGList.add(tradeInfo);
-            }
-            mysqlList = BGList;
             ExecuteMySql.getCWLDao().insertTradeList(mysqlList);
             ExecuteMySql.getSession().commit();
         }
         finally {
             ExecuteMySql.CloseMysql();
         }
-
     }
 
     //根据Excel单元格的列号来读取相应的数据
     private void parseCellBill(Cell cell, TradeInfo tradeInfo){
         switch (cell.getColumnIndex()){
             case 0:
-                //java.util.Date date = cell.getDateCellValue();
-                //result = sdf.format(date);
-                //billtemp.setBill_date(StringtoDate(result));
-
-                //System.out.println(cell.getCellStyle());
-                tradeInfo.setTradeTime(null);
+                tradeInfo.setTradeTime(getDate.CellDate((int)cell.getNumericCellValue()));
                 break;
             case 1:
-                //billtemp.setBill_comments(cell.getRichStringCellValue().getString());
                 tradeInfo.setSerialNumber((int) cell.getNumericCellValue());
                 break;
             case 2:
-                //billtemp.setBill_cost((float) cell.getNumericCellValue());
                 tradeInfo.setZiJinID((int) cell.getNumericCellValue());
                 break;
             case 3:
-                //billtemp.setBill_level((int) cell.getNumericCellValue());
                 tradeInfo.setStockID((int) cell.getNumericCellValue());
                 break;
             case 4:
@@ -154,10 +107,21 @@ public class ExceltoMySql {
         }
     }
 
-    //将相应的String类型转化成日期类型
-    public Date StringtoDate(String sDate){
-        Date dDate= Date.valueOf(sDate);
-        return dDate;
+    //遍历一个excel页面中的每个cell
+    private List excelcell(Sheet excelsheet){
+        Iterator<Row> itrow=excelsheet.rowIterator();
+        itrow.next();
+        itrow.remove();
+        while(itrow.hasNext()){
+            tradeInfo = new TradeInfo();
+            Row rowtemp=itrow.next();
+            for(Cell cell:rowtemp){
+                parseCellBill(cell,tradeInfo);
+            }
+            BGList.add(tradeInfo);
+        }
+        return BGList;
+
     }
 
 
