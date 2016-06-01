@@ -6,11 +6,7 @@
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-<<<<<<< HEAD
-               <property name="url" value="jdbc:mysql://kazaflau.f3322.net3306/credit?useUnicode=true&amp;characterEncoding=UTF-8" />
-=======
-               <property name="url" value="jdbc:mysql://kazaflau.f3322.net:3306/credit?useUnicode=true&amp;characterEncoding=UTF-8" />
->>>>>>> 5aded1a5ec49c87976e07f11ab9b689e6122f470
+              n <property name="url" value="jdbc:mysql://kazaflau.f3322.net:3306/credit?useUnicode=true&amp;characterEncoding=UTF-8" />
                 <property name="username" value="root" />
                <property name="password" value="19881129" />
            </dataSource>
