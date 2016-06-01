@@ -1,9 +1,6 @@
 package com.stock.utils;
 
-import com.kazaf.dao.CommonDAO;
-import com.kazaf.pojos.Bill;
-import com.kazaf.pojos.Gym;
-import com.stock.dao.CWLDAO;
+import com.stock.dao.TradeInfoDAO;
 import com.stock.pojos.TradeInfo;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -22,7 +19,7 @@ public class ExecuteMySql {
     private static Reader reader;
     private static SqlSessionFactory factory;
     private static SqlSession session;
-    private static CWLDAO cwlDao;
+    private static TradeInfoDAO cwlDao;
     private static List<TradeInfo> CWLList;
     private static ExecuteMySql em;
 
@@ -69,13 +66,13 @@ public class ExecuteMySql {
         return session;
     }
 
-    public static CWLDAO getCWLDao() {
+    public static TradeInfoDAO getCWLDao() {
         session=getFactory().openSession();
-        cwlDao=session.getMapper(CWLDAO.class);
+        cwlDao=session.getMapper(TradeInfoDAO.class);
         return cwlDao;
     }
 
-    public static void setCommonDao(CWLDAO CWLDao) {
+    public static void setCommonDao(TradeInfoDAO CWLDao) {
         cwlDao = CWLDao;
     }
 
@@ -85,7 +82,7 @@ public class ExecuteMySql {
         {
         session = factory.openSession();
         }
-        cwlDao=session.getMapper(CWLDAO.class);
+        cwlDao=session.getMapper(TradeInfoDAO.class);
 
     }
 
