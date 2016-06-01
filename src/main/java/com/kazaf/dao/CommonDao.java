@@ -7,7 +7,7 @@ import com.kazaf.pojos.Gym_Anaerobic;
 import java.util.List;
 
 /**
- * Created by Kazaf on 16/3/21.
+ * Created by Kazaf on 16/3/21.test
  */
 public interface CommonDAO {
 

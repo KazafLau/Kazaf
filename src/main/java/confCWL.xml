@@ -6,7 +6,7 @@
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-               <property name="url" value="jdbc:mysql://192.168.1.3:3306/stock?useUnicode=true&amp;characterEncoding=UTF-8" />
+               <property name="url" value="jdbc:mysql://kazaflau.f3322.net:3306/stock?useUnicode=true&amp;characterEncoding=UTF-8" />
                 <property name="username" value="root" />
                <property name="password" value="19881129" />
            </dataSource>
