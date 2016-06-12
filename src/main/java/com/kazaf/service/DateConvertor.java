@@ -1,8 +1,10 @@
 package com.kazaf.service;
+import org.springframework.stereotype.Component;
+
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
-
+@Component
 public class DateConvertor {
 	
 	private static  SimpleDateFormat sdf=new SimpleDateFormat( "yyyy-MM-dd");

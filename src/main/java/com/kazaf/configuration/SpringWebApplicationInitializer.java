@@ -3,6 +3,8 @@ package com.kazaf.configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 
 /**
  * Created by Kazaf on 16/5/21.
@@ -27,5 +29,10 @@ public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDis
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[]{SpringMVCConfig.class};
+    }
+
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+        super.onStartup(servletContext);
     }
 }
