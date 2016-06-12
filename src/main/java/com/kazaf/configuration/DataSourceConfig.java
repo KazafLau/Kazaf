@@ -14,10 +14,12 @@ import java.util.LinkedList;
 /**
  * Created by Kazaf on 16/5/21.
  */
-@PropertySource({"classpath:/jdbc.properties"})
+
+
+//@PropertySource({"classpath:/jdbc.properties"})
 public class DataSourceConfig {
 
-    @Value("${jdbc.driver}")
+  /*  @Value("${jdbc.driver}")
     String driver;
     @Value("${jdbc.username}")
     String username;
@@ -25,7 +27,7 @@ public class DataSourceConfig {
     String password;
     @Value("${jdbc.url}")
     String url;
-  /*  @Value("${jdbc.initialSize}")
+   @Value("${jdbc.initialSize}")
     int initialSize;
     @Value("${jdbc.maxTotal}")
     int maxTotal;
@@ -34,7 +36,7 @@ public class DataSourceConfig {
     @Value("${jdbc.minIdle}")
     int minIdle;
     @Value("${jdbc.maxWait}")
-    long maxWait;*/
+    long maxWait;
 
     @Bean(name="dataSource")
     public BasicDataSource dataSource(){
@@ -43,11 +45,11 @@ public class DataSourceConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         dataSource.setUrl(url);
-       /* dataSource.setInitialSize(initialSize);
+       dataSource.setInitialSize(initialSize);
         dataSource.setMaxTotal(maxTotal);
         dataSource.setMaxIdle(maxIdle);
         dataSource.setMinIdle(minIdle);
-        dataSource.setMaxWaitMillis(maxWait);*/
+        dataSource.setMaxWaitMillis(maxWait);
         return  dataSource;
     }
 
@@ -57,7 +59,7 @@ public class DataSourceConfig {
         a[0]=new  ClassPathResource("classpath*:com/kazaf/mapping/*Mapper.xml");
         return a;
     }
-
+*/
 
 
 }

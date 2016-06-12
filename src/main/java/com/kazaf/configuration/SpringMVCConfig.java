@@ -36,14 +36,14 @@ public class SpringMVCConfig extends WebMvcConfigurerAdapter{
        return new TimeInterceptor();
     }
 
-   /* @Bean
+   @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/classes/views/");
+        viewResolver.setPrefix("/WEB-INF/");
         viewResolver.setSuffix(".jsp");
         viewResolver.setViewClass(JstlView.class);
         return viewResolver;
-    }*/
+    }
 
     @Bean
     public HandlerAdapter servletHandlerAdapter(){

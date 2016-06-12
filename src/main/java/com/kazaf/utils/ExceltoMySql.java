@@ -7,8 +7,10 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
 import java.io.*;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
@@ -19,7 +21,7 @@ import java.util.List;
 /**
  * Created by Kazaf on 16/3/21.
  */
-@Repository
+@Component
 public class ExceltoMySql {
 
     private List<BGinter> BGList=new ArrayList<BGinter>();
@@ -32,14 +34,16 @@ public class ExceltoMySql {
     private Bill billtemp;
     private  Iterator<Row> itrow;
     private  Row rowtemp;
+    @Resource
+    private ExecuteMySql executeMySql;
 
     //1.通过filepath导入excel表数据
     public void insertList(int month,String file)throws IOException, EncryptedDocumentException, org.apache.poi.openxml4j.exceptions.InvalidFormatException{
         month=month-1;
         try{
             mysqlList= readExcel(file, month);
-            ExecuteMySql.getCommonDao().insertBillList(mysqlList);
-            ExecuteMySql.sessionCommit();
+            executeMySql.getCommonDao().insertBillList(mysqlList);
+            executeMySql.sessionCommit();
         }
         finally {
             ExecuteMySql.CloseMysql();
@@ -58,11 +62,11 @@ public class ExceltoMySql {
         }
         try {
             mysqlList =excelcell();
-            ExecuteMySql.getCommonDao().insertBillList(mysqlList);
-            ExecuteMySql.getSession().commit();
+            executeMySql.getCommonDao().insertBillList(mysqlList);
+            executeMySql.getSession().commit();
         }
         finally {
-            ExecuteMySql.CloseMysql();
+            executeMySql.CloseMysql();
         }
 
     }

@@ -11,14 +11,11 @@ import javax.servlet.ServletException;
  */
 public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-    @Override
-    protected Filter[] getServletFilters() {
-        return super.getServletFilters();
-    }
+
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/"};
+        return new String[]{"/Bill/"};
     }
 
     @Override
@@ -31,8 +28,4 @@ public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDis
         return new Class<?>[]{SpringMVCConfig.class};
     }
 
-    @Override
-    public void onStartup(ServletContext servletContext) throws ServletException {
-        super.onStartup(servletContext);
-    }
 }
