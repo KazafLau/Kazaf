@@ -1,10 +1,13 @@
 package com.kazaf.service;
 
+import org.springframework.stereotype.Component;
+
 import java.math.BigDecimal;
 
 /**
  * Created by Kazaf on 16/4/5.
  */
+@Component
 public class BMRCalculatorService {
 
 
@@ -41,6 +44,8 @@ public class BMRCalculatorService {
     private BigDecimal CalPDIn;//每日应摄入热量
     private BigDecimal CalPDOut;//每日消耗热量
 
+    public BMRCalculatorService() {
+    }
 
     public BMRCalculatorService(BigDecimal weight, BigDecimal height, int age) {
         this.weight = weight;
