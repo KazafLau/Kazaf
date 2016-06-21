@@ -19,7 +19,7 @@ import java.util.LinkedList;
 //@PropertySource({"classpath:/jdbc.properties"})
 public class DataSourceConfig {
 
-  /*  @Value("${jdbc.driver}")
+    @Value("${jdbc.driver}")
     String driver;
     @Value("${jdbc.username}")
     String username;
@@ -45,7 +45,7 @@ public class DataSourceConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         dataSource.setUrl(url);
-       dataSource.setInitialSize(initialSize);
+        dataSource.setInitialSize(initialSize);
         dataSource.setMaxTotal(maxTotal);
         dataSource.setMaxIdle(maxIdle);
         dataSource.setMinIdle(minIdle);
@@ -59,7 +59,7 @@ public class DataSourceConfig {
         a[0]=new  ClassPathResource("classpath*:com/kazaf/mapping/*Mapper.xml");
         return a;
     }
-*/
+
 
 
 }

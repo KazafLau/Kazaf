@@ -14,7 +14,7 @@
     <title>The Gym Page</title>
 </head>
 <body>
-<label>Hello this is gym page----outer</label><br>
+<label>Hello this is gym page</label><br>
 
 
 <form action="GymServlet" method="post">

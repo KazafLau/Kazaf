@@ -16,6 +16,7 @@ import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.SimpleServletHandlerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
@@ -30,6 +31,12 @@ import javax.annotation.Resource;
 @EnableWebMvc
 @ComponentScan("com.kazaf.controller")
 public class SpringMVCConfig extends WebMvcConfigurerAdapter{
+
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("index");
+    }
 
     @Bean
     public TimeInterceptor timeInterceptor(){

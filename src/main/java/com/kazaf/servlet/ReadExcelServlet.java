@@ -23,7 +23,7 @@ import java.io.InputStream;
  * Created by Kazaf on 16/4/15.
  */
 
-@WebServlet(urlPatterns = {"/ReadExcelServlet"},name = "ReadExcelServlet")
+//@WebServlet(urlPatterns = {"/ReadExcelServlet"},name = "ReadExcelServlet")
 public class ReadExcelServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

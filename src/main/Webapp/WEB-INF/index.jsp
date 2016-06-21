@@ -12,7 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Hello First!----outer</title>
+    <title>Hello First!</title>
 </head>
 <body>
 <form action="GymServlet" method="post">

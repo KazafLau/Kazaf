@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 
 
-@WebServlet("/FirstServlet")
+//@WebServlet("/FirstServlet")
 public class FirstServlet extends HttpServlet {
 
     @Override

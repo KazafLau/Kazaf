@@ -15,7 +15,7 @@ public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDis
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/Bill/"};
+        return new String[]{"/"};
     }
 
     @Override
