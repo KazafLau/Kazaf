@@ -11,6 +11,10 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.fileupload.util.Streams;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
@@ -34,10 +38,19 @@ public class BillController {
 
     @RequestMapping(value = "/uploadservlet")
     public String  ReadUpLoad(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException{
+        MultipartResolver resolver = new CommonsMultipartResolver(req.getSession().getServletContext());
+        MultipartHttpServletRequest multipartRequest = resolver.resolveMultipart(req);
         String message = "";
+        int month=Integer.parseInt(multipartRequest.getParameter("month"));
+        System.out.println("-------------------------@@@@@@@@@@@@"+multipartRequest.getParameter("month"));
         ServletFileUpload upload = new ServletFileUpload();
-        try{
+        MultipartFile file=multipartRequest.getFile("file1");
+        InputStream stream = file.getInputStream();
+        BillService.insertListStream(month,stream);
+        message = "文件读取成功！";
+       /* try{
             FileItemIterator iter = upload.getItemIterator(req);
+            //System.out.
             while (iter.hasNext()) {
                 FileItemStream item = iter.next();
                 String name = item.getFieldName();
@@ -48,7 +61,7 @@ public class BillController {
                     System.out.println("File field "+name+" with file name "+item.getName()+" detected.");
                 }
                //此处使用了Spring中的Bean
-                BillService.insertListStream(4,stream);
+                BillService.insertListStream(month,stream);
                 message = "文件读取成功！";
             }
         }catch(IOException x){
@@ -57,7 +70,7 @@ public class BillController {
         }catch(FileUploadException e){
             e.printStackTrace();
             System.out.println("ReadUpLoad中的FileUpLoadException");
-        }
+        }*/
         req.setAttribute("message", message);
         //req.getRequestDispatcher("/message.jsp").forward(req, resp);
         return "message";
