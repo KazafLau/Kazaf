@@ -38,16 +38,14 @@ public class BillController {
 
     @RequestMapping(value = "/uploadservlet")
     public String  ReadUpLoad(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException{
-        MultipartResolver resolver = new CommonsMultipartResolver(req.getSession().getServletContext());
-        MultipartHttpServletRequest multipartRequest = resolver.resolveMultipart(req);
-        String message = "";
+        MultipartHttpServletRequest multipartRequest=(MultipartHttpServletRequest) req;
         int month=Integer.parseInt(multipartRequest.getParameter("month"));
         System.out.println("-------------------------@@@@@@@@@@@@"+multipartRequest.getParameter("month"));
-        ServletFileUpload upload = new ServletFileUpload();
         MultipartFile file=multipartRequest.getFile("file1");
         InputStream stream = file.getInputStream();
         BillService.insertListStream(month,stream);
-        message = "文件读取成功！";
+        String message = "文件读取成功！";
+        //ServletFileUpload upload = new ServletFileUpload();
        /* try{
             FileItemIterator iter = upload.getItemIterator(req);
             //System.out.
