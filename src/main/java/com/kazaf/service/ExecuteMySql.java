@@ -7,6 +7,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -15,6 +16,7 @@ import java.util.List;
 /**
  * Created by Kazaf on 16/4/2.
  */
+@Repository("ems")
 public class ExecuteMySql {
 
     private static Reader reader;
@@ -98,7 +100,7 @@ public class ExecuteMySql {
 
     private static void FirstInit(){
         BillList=getCommonDao().getAllBill();
-        GymList=getCommonDao().getAllGym();
+       // GymList=getCommonDao().getAllGym();
     }
 
     public static  ExecuteMySql getInstance(){

@@ -14,11 +14,10 @@ import javax.annotation.Resource;
  */
 @Configuration
 @ComponentScan(basePackages = "com.kazaf", excludeFilters = { @ComponentScan.Filter(type = FilterType.ANNOTATION, value = { Controller.class }) })
-@EnableAspectJAutoProxy(proxyTargetClass=true)
-@Import({DataSourceConfig.class})
+//@Import({DataSourceConfig.class})
 public class AppConfig {
 
-    @Resource
+  /*  @Resource
     public BasicDataSource dataSource;
 
     @Resource
@@ -42,5 +41,5 @@ public class AppConfig {
         msc.setBasePackage("com.kazaf.dao");
         msc.setSqlSessionFactoryBeanName("sqlSessionFactoryBean1");
         return msc;
-    }
+    }*/
 }

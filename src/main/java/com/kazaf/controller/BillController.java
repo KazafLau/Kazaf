@@ -1,7 +1,9 @@
 package com.kazaf.controller;
 
 import com.kazaf.service.IBillService;
+import com.kazaf.service.IDateCalculatorService;
 import com.kazaf.service.impl.BillServiceImpl;
+import com.kazaf.service.impl.DateCalculatorServiceImpl;
 import org.apache.commons.fileupload.FileItemIterator;
 import org.apache.commons.fileupload.FileItemStream;
 import org.apache.commons.fileupload.FileUploadException;
@@ -16,19 +18,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Date;
 
 /**
  * Created by Kazaf on 16/5/20.
  */
 @Controller
-@RequestMapping("/bill")
 public class BillController {
 
     @Resource
     private IBillService BillService;
 
+    @Resource
+    private IDateCalculatorService DateCalculatorService;
 
-    @RequestMapping("/upload")
+    @RequestMapping(value = "/uploadservlet")
     public String  ReadUpLoad(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException{
         String message = "";
         ServletFileUpload upload = new ServletFileUpload();
@@ -55,33 +59,47 @@ public class BillController {
             System.out.println("ReadUpLoad中的FileUpLoadException");
         }
         req.setAttribute("message", message);
-        req.getRequestDispatcher("/message.jsp").forward(req, resp);
-        return message;
+        //req.getRequestDispatcher("/message.jsp").forward(req, resp);
+        return "message";
     }
 
+    @RequestMapping(value = "/getbillbymonth")
+    public String getBillbyMonth(HttpServletRequest req,HttpServletResponse resp)throws ServletException, IOException{
 
-    @RequestMapping("/GymServlet")
-    public void nametest(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
+        int month=1;
+        month=Integer.parseInt(req.getParameter("month"));
+
+        DateCalculatorService=new DateCalculatorServiceImpl(month);
+
+        Date firstdate=new Date(DateCalculatorService.getFirstday().getTime());
+        Date lastday=new Date(DateCalculatorService.getLastday().getTime());
+
+        req.setAttribute("getBiibyMonth",BillService.getBill(firstdate,lastday));
+        req.setAttribute("firstday",firstdate);
+        req.setAttribute("lastday",lastday);
+        req.setAttribute("cosumedays",DateCalculatorService.getCosumedays());
+        req.setAttribute("days",DateCalculatorService.getDays());
+        req.getRequestDispatcher("/getBillbyMonth.jsp").forward(req,resp);
+
+        return null;
+    }
+
+    @RequestMapping(value = "/GymServlet")
+    public String gymtest(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
         System.out.println(request.getParameter("username"));
         System.out.println(request.getParameter("password"));
-
-
         System.out.println("转发前的mmmmmmmm"+request.getAttribute("rtest"));
-        // request.getRequestDispatcher("gym.jsp").include(request,response);
-        request.getRequestDispatcher("gym.jsp").forward(request, response);
-        // response.sendRedirect("gym.jsp");
+        //request.getRequestDispatcher("gym.jsp").include(request,response);
+        //request.getRequestDispatcher("gym.jsp").forward(request, response);
+        //response.sendRedirect("gym.jsp");
         //System.out.println(request.getAttribute("rtest"));
-
         System.out.println("转发后的mmmmmmmm"+request.getAttribute("rtest"));
-
-
         request.setAttribute("rtest", "hello");
         //HttpSession session=request.getSession();
         request.getSession().setAttribute("stest", "hellosession");
-
         System.out.println(request.getSession().getAttribute("stest"));
         System.out.println(request.getAttribute("rtest"));
-
+        System.out.println("from controller");
+        return  "gym";
     }
-
 }

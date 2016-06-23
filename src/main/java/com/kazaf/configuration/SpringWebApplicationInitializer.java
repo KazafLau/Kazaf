@@ -1,5 +1,6 @@
 package com.kazaf.configuration;
 
+import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
@@ -9,10 +10,11 @@ import javax.servlet.Filter;
  */
 public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-    @Override
-    protected Filter[] getServletFilters() {
+    //@Override
+    /*protected Filter[] getServletFilters() {
         return super.getServletFilters();
-    }
+    }*/
+
 
     @Override
     protected String[] getServletMappings() {

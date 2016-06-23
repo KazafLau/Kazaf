@@ -14,11 +14,11 @@ import java.util.LinkedList;
 /**
  * Created by Kazaf on 16/5/21.
  */
-@Configuration
-@PropertySource({"classpath:/jdbc.properties"})
+//@Configuration
+//@PropertySource({"classpath:/jdbc.properties"})
 public class DataSourceConfig {
 
-    @Value("${jdbc.driver}")
+  /*  @Value("${jdbc.driver}")
     String driver;
     @Value("${jdbc.username}")
     String username;
@@ -60,6 +60,6 @@ public class DataSourceConfig {
         return a;
     }
 
-
+*/
 
 }

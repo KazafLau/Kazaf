@@ -17,6 +17,10 @@
         select * from bill ;
     </select>
 
+    <select id="getBillbyMonth" parameterType="int" resultType="com.kazaf.pojos.Bill">
+        select * from bill where bill_date BETWEEN ... and ....;
+    </select>
+
     <select id="getconsumeDays" resultType="int">
         SELECT COUNT (DISCONNECT bill_date) FROM bill WHERE bill_date BETWEEN #{property1,javaType=java.util.Date,jdbcType=DATE}
         AND #{property2,javaType=java.util.Date,jdbcType=DATE};

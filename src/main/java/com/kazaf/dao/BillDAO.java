@@ -15,4 +15,6 @@ public interface BillDAO {
 
 	public int getconsumeDays(Date firstday,Date lastday);
 
+	public List<Bill> getBillbyMonth(java.sql.Date startday, java.sql.Date enddate);
+
 }

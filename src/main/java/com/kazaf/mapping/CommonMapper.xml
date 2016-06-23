@@ -77,4 +77,9 @@
         </foreach>
 
     </insert>
+
+
+    <select id="getBillbyMonth" resultType="com.kazaf.pojos.Bill">
+        select * from bill where bill_date BETWEEN #{0} and #{1};
+    </select>
 </mapper>

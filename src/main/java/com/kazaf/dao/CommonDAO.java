@@ -34,4 +34,6 @@ public interface CommonDAO {
 
     public void insertGymAnaerobic(Gym_Anaerobic gym_anaerobic);
 
+    public List<Bill> getBillbyMonth(java.sql.Date startday, java.sql.Date enddate);
+
 }
