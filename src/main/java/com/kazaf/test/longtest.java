@@ -1,7 +1,11 @@
 package com.kazaf.test;
 
 import com.kazaf.pojos.Bill;
+import com.kazaf.pojos.GroupMonth;
+import com.kazaf.service.ExecuteMySql;
 import com.kazaf.service.JDBCMySql;
+
+import java.util.List;
 
 
 /**
@@ -11,7 +15,7 @@ public class longtest {
 
     public static void main(String args[]){
 
-      // ExecuteMySql em=new ExecuteMySql();
+       ExecuteMySql em=new ExecuteMySql();
        // ExecuteMySql em1=new ExecuteMySql();
 
        // em.OpenMysql();
@@ -28,7 +32,13 @@ public class longtest {
 
        // System.out.println(ExecuteMySql.getBillList().get(0).getBill_date() + " " + ExecuteMySql.getBillList().get(0).getBill_comments());
 
-       // List<Bill> nList= ExecuteMySql.getBillList();
+        List<GroupMonth> nList= ExecuteMySql.getCommonDao().groupbymonth();
+
+        {        System.out.println("bixu"+" "+"feibixu"+" "+"zonggong"+" "+"riqi");}
+
+        for(GroupMonth temple:nList)
+
+        {        System.out.println(temple.getNecessary()+" "+temple.getUnnecessary()+" "+temple.getTotall()+" "+temple.getMonthdate());}
 
         //nList.remove(0);
 
@@ -49,6 +59,7 @@ public class longtest {
 
 
 
+        /*
         System.out.println(java.nio.charset.Charset.defaultCharset() );
         JDBCMySql jdbcMySql=new JDBCMySql();
       //System.out.println("THis is after  "+JDBCMySql.getConnection());
@@ -57,6 +68,7 @@ public class longtest {
         for(Bill bill:jdbcMySql.getTypebetween(startdate,enddate)){
             System.out.println(bill.getBill_date()+" "+bill.getBill_comments()+" "+bill.getBill_cost());
         }
+        */
 
 
 

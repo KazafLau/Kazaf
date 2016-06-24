@@ -101,7 +101,6 @@ public class ExecuteMySql {
 
     private static void FirstInit(){
         BillList=getCommonDao().getAllBill();
-       // GymList=getCommonDao().getAllGym();
     }
 
     public static  ExecuteMySql getInstance(){
@@ -111,19 +110,4 @@ public class ExecuteMySql {
         return em;
     }
 
-    public static List<Bill> getBillList() {
-        return BillList;
-    }
-
-    public static void setBillList(List<Bill> billList) {
-        BillList = billList;
-    }
-
-    public static List<Gym> getGymList() {
-        return GymList;
-    }
-
-    public static void setGymList(List<Gym> gymList) {
-        GymList = gymList;
-    }
 }

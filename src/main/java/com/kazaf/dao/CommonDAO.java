@@ -1,6 +1,7 @@
 package com.kazaf.dao;
 
 import com.kazaf.pojos.Bill;
+import com.kazaf.pojos.GroupMonth;
 import com.kazaf.pojos.Gym;
 import com.kazaf.pojos.Gym_Anaerobic;
 
@@ -35,5 +36,7 @@ public interface CommonDAO {
     public void insertGymAnaerobic(Gym_Anaerobic gym_anaerobic);
 
     public List<Bill> getBillbyMonth(java.sql.Date startday, java.sql.Date enddate);
+
+    public List<GroupMonth> groupbymonth();
 
 }

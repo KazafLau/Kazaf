@@ -1,6 +1,7 @@
 package com.kazaf.dao;
 
 import com.kazaf.pojos.Bill;
+import com.kazaf.pojos.GroupMonth;
 
 import java.util.Date;
 import java.util.List;
@@ -17,5 +18,7 @@ public interface BillDAO {
 	public int getconsumeDays(Date firstday,Date lastday);
 
 	public List<Bill> getBillbyMonth(java.sql.Date startday, java.sql.Date enddate);
+
+	public GroupMonth groupbymonth();
 
 }

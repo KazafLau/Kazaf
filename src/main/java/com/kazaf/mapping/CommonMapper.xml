@@ -82,4 +82,30 @@
     <select id="getBillbyMonth" resultType="com.kazaf.pojos.Bill">
         select * from bill where bill_date BETWEEN #{0} and #{1};
     </select>
+
+
+    <resultMap id="GroupMonth" type="com.kazaf.pojos.GroupMonth">
+        <id column="monthdate" property="monthdate"/>
+        <result column="necessary" property="necessary"/>
+        <result column="unnecessary" property="unnecessary"/>
+        <result column="totall" property="totall"/>
+    </resultMap>
+    <select id="groupbymonth" resultMap="GroupMonth">
+        select
+        A.nec as necessary ,B.unnec as unnecessary,A.nec+B.unnec as totall,A.adate as monthdate
+        from (
+        select sum(bill_cost) as nec ,date_format(bill_date,'%Y-%m')  as adate
+        from bill
+        where bill_date>=20160101 and bill_level=0
+        group by date_format(bill_date,'%Y-%m')
+        )A
+        inner join
+        (
+        select sum(bill_cost) as unnec ,date_format(bill_date,'%Y-%m')  as adate
+        from bill
+        where bill_date>=20160101 and bill_level=1
+        group by date_format(bill_date,'%Y-%m')
+        )B
+        on(A.adate=B.adate);
+    </select>
 </mapper>
