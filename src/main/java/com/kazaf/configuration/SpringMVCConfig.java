@@ -45,10 +45,6 @@ public class  SpringMVCConfig extends WebMvcConfigurerAdapter{
         registry.addViewController("/upload").setViewName("upload");
     }
 
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
-    }
 
     @Bean
     public TimeInterceptor timeInterceptor(){
@@ -58,7 +54,7 @@ public class  SpringMVCConfig extends WebMvcConfigurerAdapter{
    @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/");
+        viewResolver.setPrefix("/WEB-INF/views/");
         viewResolver.setSuffix(".jsp");
         viewResolver.setViewClass(JstlView.class);
         return viewResolver;

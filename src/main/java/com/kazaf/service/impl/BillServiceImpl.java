@@ -64,10 +64,5 @@ public class BillServiceImpl implements IBillService {
 
     }
 
-    @Override
-    public List<Bill> getBill(Date startdate,Date enddate) {
 
-
-        return etm.getBillbyMonth(startdate,enddate);
-    }
 }
