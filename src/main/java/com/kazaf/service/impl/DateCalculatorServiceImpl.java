@@ -106,7 +106,7 @@ public class DateCalculatorServiceImpl implements IDateCalculatorService {
 		  calendar.set(Calendar.SECOND, 0);
 		}
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 
 		DateCalculatorServiceImpl a=new DateCalculatorServiceImpl(3);
 
@@ -117,4 +117,5 @@ public class DateCalculatorServiceImpl implements IDateCalculatorService {
 		System.out.println(jdbcMySql.getconsumeDays(firstd,lastd));
 	}
 
+	*/
 }

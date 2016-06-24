@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Message----outer</title>
+    <title>Message</title>
 </head>
 <body>
 ${requestScope.message}

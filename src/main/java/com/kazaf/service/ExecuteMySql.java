@@ -16,7 +16,8 @@ import java.util.List;
 /**
  * Created by Kazaf on 16/4/2.
  */
-@Repository("ems")
+
+@Repository
 public class ExecuteMySql {
 
     private static Reader reader;

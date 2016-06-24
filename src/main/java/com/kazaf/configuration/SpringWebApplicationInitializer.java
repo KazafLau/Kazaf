@@ -4,11 +4,14 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 
 /**
  * Created by Kazaf on 16/5/21.
  */
 public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
 
     //@Override
     /*protected Filter[] getServletFilters() {
@@ -30,4 +33,5 @@ public class SpringWebApplicationInitializer extends AbstractAnnotationConfigDis
     protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[]{SpringMVCConfig.class};
     }
+
 }

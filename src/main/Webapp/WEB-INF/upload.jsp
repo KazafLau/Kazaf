@@ -2,12 +2,11 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>读取Excel----outer</title>
+    <title>读取Excel</title>
   </head>
   
   <body>
-    <form action="/uploadservlet"  enctype="multipart/form-data" method="post">
-
+    <form action="/upload"  enctype="multipart/form-data" method="post">
         读取文件：<input type="file" name="file1"><br/>
         <select name="type">
             <option value="bill">Bill</option>

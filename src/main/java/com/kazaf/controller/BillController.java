@@ -74,27 +74,6 @@ public class BillController {
         return "message";
     }
 
-    @RequestMapping(value = "/getbillbymonth")
-    public String getBillbyMonth(HttpServletRequest req,HttpServletResponse resp)throws ServletException, IOException{
-
-        int month=1;
-        month=Integer.parseInt(req.getParameter("month"));
-
-        DateCalculatorService=new DateCalculatorServiceImpl(month);
-
-        Date firstdate=new Date(DateCalculatorService.getFirstday().getTime());
-        Date lastday=new Date(DateCalculatorService.getLastday().getTime());
-
-        req.setAttribute("getBiibyMonth",BillService.getBill(firstdate,lastday));
-        req.setAttribute("firstday",firstdate);
-        req.setAttribute("lastday",lastday);
-        req.setAttribute("cosumedays",DateCalculatorService.getCosumedays());
-        req.setAttribute("days",DateCalculatorService.getDays());
-        req.getRequestDispatcher("/getBillbyMonth.jsp").forward(req,resp);
-
-        return null;
-    }
-
     @RequestMapping(value = "/GymServlet")
     public String gymtest(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
         System.out.println(request.getParameter("username"));

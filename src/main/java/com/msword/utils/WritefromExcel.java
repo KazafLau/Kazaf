@@ -16,9 +16,7 @@ public class WritefromExcel{
     String templatePath = "templatenew.doc";
 
 
-
         public void testWrite(Customer a)throws IOException{
-
             InputStream is = new FileInputStream(templatePath);
             HWPFDocument doc = new HWPFDocument(is);
             Range range = doc.getRange();

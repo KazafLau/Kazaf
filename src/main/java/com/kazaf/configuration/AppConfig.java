@@ -18,12 +18,16 @@ import javax.annotation.Resource;
 public class AppConfig {
 
   /*  @Resource
+=======
+public class AppConfig {
+
+
+   /* @Resource(name="dataSource")
+>>>>>>> 652c03a15ee834def6a1a557ea6359b382407763
     public BasicDataSource dataSource;
 
     @Resource
     public ClassPathResource[] urlResource;
-
-
 
     @Bean(name = "sqlSessionFactoryBean1")
     SqlSessionFactoryBean sqlSessionFactoryBean(){
@@ -33,7 +37,6 @@ public class AppConfig {
         sfb.setTypeAliasesPackage("com/kazaf/domain");
         return sfb;
     }
-
 
     @Bean
     MapperScannerConfigurer mapperconfig(){

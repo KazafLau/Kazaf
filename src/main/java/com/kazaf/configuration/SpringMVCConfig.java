@@ -1,5 +1,6 @@
 package com.kazaf.configuration;
 
+import com.kazaf.Interceptors.TimeInterceptor;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
@@ -18,6 +19,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.handler.SimpleServletHandlerAdapter;
@@ -43,10 +45,20 @@ public class  SpringMVCConfig extends WebMvcConfigurerAdapter{
         registry.addViewController("/upload").setViewName("upload");
     }
 
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName("index");
+    }
+
     @Bean
+    public TimeInterceptor timeInterceptor(){
+       return new TimeInterceptor();
+    }
+
+   @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setPrefix("/WEB-INF/");
         viewResolver.setSuffix(".jsp");
         viewResolver.setViewClass(JstlView.class);
         return viewResolver;
@@ -57,13 +69,14 @@ public class  SpringMVCConfig extends WebMvcConfigurerAdapter{
         return new SimpleServletHandlerAdapter();
     }
 
-
     @Bean
     public MultipartResolver multipartResolver(){
         CommonsMultipartResolver multipartResolver=new CommonsMultipartResolver();
         return multipartResolver;
     }
 
-
-
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(timeInterceptor());
+    }
 }
