@@ -15,7 +15,7 @@
     
  <mappers>
 
-     <mapper resource="com/stock/mapping/CuiWeiLongMapper.xml"/>
+     <mapper resource="com/stock/mapping/TradeInfoMapper.xml"/>
  </mappers>  
   
  </configuration>

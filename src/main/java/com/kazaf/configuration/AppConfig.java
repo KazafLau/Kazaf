@@ -14,10 +14,16 @@ import javax.annotation.Resource;
  */
 @Configuration
 @ComponentScan(basePackages = "com.kazaf", excludeFilters = { @ComponentScan.Filter(type = FilterType.ANNOTATION, value = { Controller.class }) })
+//@Import({DataSourceConfig.class})
+public class AppConfig {
+
+  /*  @Resource
+=======
 public class AppConfig {
 
 
    /* @Resource(name="dataSource")
+>>>>>>> 652c03a15ee834def6a1a557ea6359b382407763
     public BasicDataSource dataSource;
 
     @Resource
@@ -39,7 +45,4 @@ public class AppConfig {
         msc.setSqlSessionFactoryBeanName("sqlSessionFactoryBean1");
         return msc;
     }*/
-
-
-
 }

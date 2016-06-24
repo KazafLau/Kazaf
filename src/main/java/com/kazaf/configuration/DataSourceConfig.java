@@ -15,6 +15,7 @@ import java.util.LinkedList;
  * Created by Kazaf on 16/5/21.
  */
 
+//@Configuration
 
 //@PropertySource({"classpath:/jdbc.properties"})
 public class DataSourceConfig {
@@ -45,7 +46,7 @@ public class DataSourceConfig {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
         dataSource.setUrl(url);
-       dataSource.setInitialSize(initialSize);
+        dataSource.setInitialSize(initialSize);
         dataSource.setMaxTotal(maxTotal);
         dataSource.setMaxIdle(maxIdle);
         dataSource.setMinIdle(minIdle);
@@ -59,7 +60,7 @@ public class DataSourceConfig {
         a[0]=new  ClassPathResource("classpath*:com/kazaf/mapping/*Mapper.xml");
         return a;
     }
-*/
 
+*/
 
 }

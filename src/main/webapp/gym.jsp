@@ -11,10 +11,10 @@
 <%@ page import="com.kazaf.pojos.Bill" %>
 <html>
 <head>
-    <title>The Gym Page  from resources</title>
+    <title>The Gym Page</title>
 </head>
 <body>
-<label>Hello this is gym page</label><br>
+<label>Hello this is gym page----outer</label><br>
 
 
 <form action="GymServlet" method="post">

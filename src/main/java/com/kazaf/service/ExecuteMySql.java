@@ -16,6 +16,7 @@ import java.util.List;
 /**
  * Created by Kazaf on 16/4/2.
  */
+
 @Repository
 public class ExecuteMySql {
 
@@ -100,7 +101,7 @@ public class ExecuteMySql {
 
     private static void FirstInit(){
         BillList=getCommonDao().getAllBill();
-        GymList=getCommonDao().getAllGym();
+       // GymList=getCommonDao().getAllGym();
     }
 
     public static  ExecuteMySql getInstance(){

@@ -12,10 +12,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Hello First!  from resources</title>
+    <title>Hello First! from WEB-INF/views</title>
 </head>
 <body>
-<form action="GymServlet" method="post">
+<form action="/Login" method="post">
  <label>姓名</label> <input type="text" name="username">
   <label>密码</label> <input type="password" name="password">
   <input type="submit" value="确认">

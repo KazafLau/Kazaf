@@ -11,7 +11,7 @@
 <%@ page import="com.kazaf.pojos.Bill" %>
 <html>
 <head>
-    <title>The Gym Page  from resources</title>
+    <title>The Gym Page  from WEB-INF/views</title>
 </head>
 <body>
 <label>Hello this is gym page</label><br>
