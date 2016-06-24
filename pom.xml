@@ -159,17 +159,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-<<<<<<< HEAD
             <version>${spring.version}</version>
-=======
-            <version>4.2.5.RELEASE</version>
-        </dependency>
-        <!-- http://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>1.8.9</version>
->>>>>>> 652c03a15ee834def6a1a557ea6359b382407763
         </dependency>
 
 
