@@ -43,6 +43,7 @@ public class  SpringMVCConfig extends WebMvcConfigurerAdapter{
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("index");//set the index.jsp
         registry.addViewController("/upload").setViewName("upload");
+        registry.addViewController("/gbm").setViewName("getBillbyMonth");
     }
 
 

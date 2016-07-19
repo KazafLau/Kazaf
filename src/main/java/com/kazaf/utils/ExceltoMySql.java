@@ -108,7 +108,6 @@ public class ExceltoMySql {
         return dDate;
     }
 
-
     //读取页面单元格内容到BGList列表中----内部方法
     private List excelcell(){
         itrow=excelsheet.rowIterator();

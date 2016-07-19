@@ -2,6 +2,7 @@ package com.kazaf.service;
 
 import com.kazaf.dao.CommonDAO;
 import com.kazaf.pojos.Bill;
+import com.kazaf.pojos.GroupMonth;
 import com.kazaf.pojos.Gym;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -26,6 +27,7 @@ public class ExecuteMySql {
     private static CommonDAO commonDao;
     private static List<Bill> BillList;
     private static List<Gym> GymList;
+    private static List<GroupMonth> GroupMonthList;
     private static ExecuteMySql em;
 
     static {
@@ -36,7 +38,7 @@ public class ExecuteMySql {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if(BillList==null|GymList==null)
+        if(BillList==null|GroupMonthList==null)
         {
         FirstInit();
         }
@@ -99,8 +101,14 @@ public class ExecuteMySql {
         session.close();
     }
 
+    public static List<GroupMonth> getGroupMonthList() {
+        return GroupMonthList;
+    }
+
     private static void FirstInit(){
         BillList=getCommonDao().getAllBill();
+        GroupMonthList=getCommonDao().groupbymonth();
+
     }
 
     public static  ExecuteMySql getInstance(){

@@ -1,3 +1,6 @@
+<%@ page import="com.kazaf.pojos.GroupMonth" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Iterator" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html>
@@ -10,7 +13,36 @@
     <div id="main" style="height:400px"></div>
     <!-- ECharts单文件引入 -->
     <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-<script type="text/javascript">
+
+    <script type="text/javascript">
+
+        let ness=new Array();
+        let unes=new Array();
+        let tota=new Array();
+        let month=new Array();
+        let num=1;
+
+        <%
+          List<GroupMonth> groupMonthList=null;
+          groupMonthList=(List<GroupMonth>)request.getSession().getAttribute("GroupMonth");
+          if(groupMonthList!=null){
+              GroupMonth tempgm;
+              Iterator a=groupMonthList.iterator();
+              while(a.hasNext()){
+                  tempgm=(GroupMonth)a.next();%>
+        ness.push(<%=tempgm.getNecessary()%>);
+        unes.push(<%=tempgm.getUnnecessary()%>);
+        tota.push(<%=tempgm.getTotall()%>);
+        month.push(num+'月份');
+        num=num+1;
+        <%
+            }
+        }
+      %>
+
+
+
+
      // 路径配置
         require.config({
             paths: {
@@ -30,14 +62,14 @@
                 
                 var option = {
     title : {
-        text: '某地区蒸发量和降水量',
-        subtext: '纯属虚构'
+        text: '2016年消费记录',
+        subtext: '个人财务数据'
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
-        data:['蒸发量','降水量']
+        data:['必要消费','非必要消费','总消费']
     },
     toolbox: {
         show : true,
@@ -53,7 +85,7 @@
     xAxis : [
         {
             type : 'category',
-            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+            data : month
         }
     ],
     yAxis : [
@@ -63,9 +95,9 @@
     ],
     series : [
         {
-            name:'蒸发量',
+            name:'必要消费',
             type:'bar',
-            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+            data: ness,
             markPoint : {
                 data : [
                     {type : 'max', name: '最大值'},
@@ -79,13 +111,29 @@
             }
         },
         {
-            name:'降水量',
+            name:'非必要消费',
             type:'bar',
-            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+            data: unes,
             markPoint : {
                 data : [
-                    {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
-                    {name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '平均值'}
+                ]
+            }
+        },
+        {
+            name:'总消费',
+            type:'bar',
+            data: tota,
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
                 ]
             },
             markLine : {

@@ -26,7 +26,7 @@ ${requestScope.cosumedays}
 
 <%
     List<Bill> monthBill=null;
-    monthBill=(List<Bill>)request.getAttribute("getBiibyMonth");
+    monthBill=(List<Bill>)request.getAttribute("getBillbyMonth");
     if(monthBill!=null){
        Bill billtemp;
 %>
